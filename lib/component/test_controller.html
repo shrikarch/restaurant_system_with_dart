@@ -1,0 +1,36 @@
+<!-- ng-template example for modal -->
+<script type="text/ng-template" id="template_2.html">
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  <h4 class="modal-title">I'm a modal!</h4>
+</div>
+<div class="modal-body">
+  Username: <input type="text" name="username" ng-model="username">
+  Password: <input type="password" name="password" ng-model="password">
+  
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  <button type="button" class="btn btn-primary">OK</button>
+</div>
+</script>
+
+<!-- modal -->
+<div class="panel panel-default">
+  <div class="panel-heading">Modal from template embedded in source code</div>
+  <div class="panel-body">
+    <div>
+      <div class="btn-group">
+          <button type="button" class="btn btn-primary" ng-model="backdrop" btn-radio="'true'">Dynamic Backdrop</button>
+          <button type="button" class="btn btn-primary" ng-model="backdrop" btn-radio="'false'">No Backdrop</button>
+          <button type="button" class="btn btn-primary" ng-model="backdrop" btn-radio="'static'">Static Backdrop</button>
+      </div>
+      <br/><br/>
+      <button class="btn btn-default" ng-click="open()">Open me!</button>
+    </div>
+  </div>
+</div>
+
+<!-- -->
+<!-- -->
+<!-- -->

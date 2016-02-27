@@ -1,0 +1,58 @@
+<div ng-switch="menuItemsLoaded">
+  <div ng-switch-when="false">
+
+  </div>
+  <div ng-switch-when="true">
+    <span class="hide">{{allMenuItems.length}}</span>
+    <div class="wrap">
+      <!--SIDEBAR-->
+      <div class="col-md-2 sidebar">
+        <div class="row">
+          <section> 
+            <h4 class="sidebar-head"><span class="fa fw fa-sliders"></span> &nbsp;Dashboard</h4>
+          </section>
+          <div class="border"></div>
+          <section>
+            <p class="section-head">BASIC SETTINGS</p>
+            <p class="pointer" ng-click="previewMenu()"><a><span class="fa fw fa-eye"></span> &nbsp;Preview</a></p>
+            <p class="pointer" ng-click="previewMenu()"><a><span class="fa fw fa-bookmark"></span> &nbsp;Another Preview</a></p>
+          </section>
+          <section>
+            <p class="section-head">Menu categories</p>
+            <span ng-repeat="list in properMenuItems">
+            <p class="pointer" ng-click="selectCategory(list.first.category)"><a><span class="fa fw caret-right"></span> &nbsp;{{list.first.category}}</a></p>
+            </span>
+            </section>
+          <section>
+            <p class="section-head">general Settings</p>
+            <p><a href=""><span class="fa fw fa-cog"></span> &nbsp;Info Settings</a></p>
+            <p><a href=""><span class="fa fw fa-desktop"></span> &nbsp;Display Settings</a></p>
+          </section>
+          <div class="border"></div>
+          <section>
+            <p class="section-head">Add Item</p>
+            <p><a href=""><span class="fa fw">{{totalItems}}</span> &nbsp;Total Items</a></p>
+            <p class="add-another pointer" ng-click="addButton()"><a><span class="fa fw fa-plus"></span> &nbsp;Add an item</a></p>
+          </section>
+        </div>
+      </div> <!--./col-->
+      <!--BLOG COLUMN-->
+
+      <div class="container">
+      <div class="col-sm-10 col-sm-offset-2 gen-sec">
+      <div class="container"></div>
+       <ng-view></ng-view>
+      
+      </div><!-- ./col -->
+      </div>
+      
+     <div style="clear:both"></div>       
+
+   </div>
+
+  
+</div>
+</div>
+<!--
+<ng-view></ng-view>
+-->

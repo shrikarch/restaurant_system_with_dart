@@ -1,0 +1,1 @@
+web: /app/dart-sdk/bin/dart web/stream_server.dart

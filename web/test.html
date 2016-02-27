@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html ng-app id="dbhtml" class="view-html">
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async type="application/dart" src="test.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script async src="packages/browser/dart.js"></script>
+    <script src="packages/web_components/webcomponents.js"></script>
+    <script src="packages/web_components/dart_support.js"></script>
+    
+    <link rel="stylesheet" href="packages/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="packages/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="packages/angular_ui/css/angular.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href= "style.css">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <!--
+    <link rel="import" href="packages/paper_elements/paper_checkbox.html">
+    <link rel="import" href="packages/core_elements/core_label.html">
+    -->
+    
+    <!--
+    <style>
+    paper-checkbox {
+      padding: 10px 10px 10px 0;
+    }
+    </style>
+    -->
+    <title>test</title>
+
+    
+    <!--<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>-->
+    
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#nav" id="dbbody" class="view-body">
+  <!--<core-label horizontal layout><paper-checkbox for></paper-checkbox><div><h4>Cool stuff</h4></div></core-label>-->
+  <span class="loader"><span class="loader-inner"></span></span>
+     <ng-view></ng-view>
+
+  </body>
+</html>

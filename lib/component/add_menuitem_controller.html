@@ -1,0 +1,41 @@
+<div class="container">
+  <!-- <form action=""> --> <!-- form tag if you need it -->
+  <div>
+    <div class="">Item Name</div>
+      <input type="text" name="itemName" ng-model="menuItem.name">
+    </div>
+    <br>
+    <div>
+      <div>Item Description</div>
+        <textarea name="itemDesc" id="" cols="30" rows="10" ng-model="menuItem.description"></textarea>
+      </div>
+      <br>
+      <div>
+      <div>Item Price</div>
+      <input type="text" name="itemPrice" ng-model="menuItem.price">
+      </div>
+      <br>
+      <div>
+      <div>Item Category</div>
+      <select ng-model="menuItem.category"> <!-- category ng-repeat -->
+        <option ng-repeat="cat in categories" value="{{cat}}">{{cat}}</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <div>Or add new category</div>
+      <input type="text" name="new-cat" ng-model="menuItem.category">
+    </div>
+    <br>
+    <div><div>Type of Item</div>
+    <input type="radio" name="itemType" value="veg" ng-model="type">Veg
+    <input type="radio" name="itemType" value="nonveg" ng-model="type">Non-Veg
+  </div>
+  <br>
+  <div>
+    <button type="submit" ng-click="save()">Submit</button>
+  </div>
+  <div ng-repeat="caty in categories">{{caty}}</div>
+  
+  <!-- </form>    -->
+</div>

@@ -1,0 +1,49 @@
+#footer {
+  margin-top: 120px;
+  height: 200px;
+  background-color: #333;
+  color: #ccc;
+  padding-top: 40px;
+}
+#footer .f-list-head {
+  font-weight: 700;
+  color: #eee;
+}
+#footer .f-list a {
+  color: #ccc;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+#footer .f-list :hover {
+  color: #fff;
+}
+#footer .f-list ul,
+#footer .f-list li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#footer .rights-logo {
+  margin-top: 10px;
+  text-align: center;
+  color: #eee;
+}
+#footer .rights-logo .rights-line {
+  letter-spacing: 1.7px;
+  margin-top: -10px;
+  color: #ccc;
+}
+#footer .rights-logo .f-social {
+  letter-spacing: 22px;
+  font-size: 20px;
+}
+#footer .rights-logo .f-social a:first-child {
+  padding-left: 20px;
+}
+#footer .rights-logo .f-social a {
+  text-decoration: none;
+  color: #ccc;
+}
+#footer .rights-logo .f-social :hover {
+  color: #28a203;
+}

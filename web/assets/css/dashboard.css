@@ -1,0 +1,72 @@
+
+.dashboard-body {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: #EEF0F3;
+  height: 100%;
+}
+#dashboard-wrap h1,
+h2,
+h3,
+h5 {
+  font-weight: 700;
+}
+.dashboard-html,
+.dashboard-body {
+  height: 100%;
+}
+.dashboard-html .sidebar,
+.dashboard-body .sidebar {
+  background-color: #2E3439;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  color: #8E9CA8;
+}
+.dashboard-html .sidebar a,
+.dashboard-body .sidebar a {
+  color: #8E9CA8;
+  text-decoration: none;
+}
+.dashboard-html .sidebar a:hover,
+.dashboard-body .sidebar a:hover {
+  color: #eee;
+}
+.dashboard-html section,
+.dashboard-body section {
+  padding: 10px 10px 0px 25px;
+}
+.dashboard-html .border,
+.dashboard-body .border {
+  border-bottom: 1px solid #222;
+}
+.dashboard-html .sidebar-head,
+.dashboard-body .sidebar-head {
+  padding-bottom: 10px;
+}
+.dashboard-html .section-head,
+.dashboard-body .section-head {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #68737c;
+  font-weight: 600;
+}
+.dashboard-html .add-another,
+.dashboard-body .add-another {
+  padding: 5px 10px 5px 10px;
+  margin-right: 20px;
+  border: 1px dotted;
+}
+.dashboard-html .wrap,
+.dashboard-body .wrap {
+  min-height: 100%;
+  position: absolute;
+}
+.dashboard-html .well,
+.dashboard-body .well {
+  margin-top: 20px;
+  background-color: #fff !important;
+  box-shadow: 0px 0px 5px 1px #ccc;
+  border-radius: 2px;
+}

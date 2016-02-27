@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mongo Client</title>
+    
+    <link rel="stylesheet" href="mongo_pro.css">
+    
+    <link rel="stylesheet" href="packages/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="packages/bootstrap/css/bootstrap-theme.min.css">
+    <!-- <script src="packages/web_components/platform.js"></script> -->
+    <script src="packages/web_components/dart_support.js"></script>
+    <!-- <script src="packages/jquery/jquery.js"></script> -->
+    <style>
+      [ng-cloak], [data-ng-cloak], .ng-cloak {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body ng-cloak>
+  <div class="container">
+    <h1>Mongo Client <span>{{yolo}}</span><span id="sample_text_id"></span></h1>
+    <div class="jumbotron">lol</div>
+    
+    <br>
+    <!--
+    <recipe-book>
+    -->
+      <h1>Menu Card</h1>
+      <div ng-repeat="category in menu.categories">
+        <h3>{{category.name}}</h3>
+        <div ng-repeat="item in category.items">
+        <h4>{{item.name}}</h4>
+        <rating rating="3" max-rating="5"></rating>
+        <ul>
+        <li>Price: {{item.price}}
+        <li>Description: {{item.description}}
+        </ul>
+        </div>
+      </div>
+      
+      <!-- <div ng-repeat="categories in menu">
+      <div ng-repeat="category in categories">
+      {{category.name}}
+      
+        <li ng-repeat="">
+          {{category.name}} <br>
+           {{category.price}}<br>
+            {{category.description}}
+        </li> 
+      </div> 
+      </div> -->
+      
+      
+      <!--
+    </recipe-book>
+    -->
+    </div>
+    <script async type="application/dart" src="mongo_client.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+    <!-- <script async src="packages/bootstrap/js/bootstrap.js"></script> -->
+    
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<div class="modal-header">
+  <button type="button" class="close" ng-click="editorClose()" aria-hidden="true">&times;</button>
+  <h4 class="modal-title">Edit {{selectedMenuItem.name}}</h4>
+</div>
+<div class="modal-body">
+<div class="container hide" ng-if="selectedMenuItem != null">
+  <div>
+    <div class="">Item Name</div>
+      <input type="text" name="itemName" ng-model="selectedMenuItem.name">
+    </div>
+    <br>
+    <div>
+      <div>Item Description</div>
+        <textarea name="itemDesc" id="" cols="30" rows="10" ng-model="selectedMenuItem.description"></textarea>
+      </div>
+      <br>
+      <div>
+      <div>Item Price</div>
+      <input type="text" name="itemPrice" ng-model="selectedMenuItem.price">
+      </div>
+      <br>
+      <div>
+      <div>Item Category</div>
+      <select ng-model="selectedMenuItem.category"> <!-- category ng-repeat -->
+        <option ng-repeat="cat in categories" value="{{cat}}">{{cat}}</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <div>Or add new category</div>
+      <input type="text" name="new-cat" ng-model="selectedMenuItem.category">
+    </div>
+    <br>
+    <div><div>Type of Item</div>
+    <input type="radio" name="itemType" value="Veg">Veg
+    <input type="radio" name="itemType" value="Non-Veg">Non-Veg
+  </div>
+  <br>
+  <div>
+    <!--
+    <button type="submit" ng-click="save()">Submit</button><button ng-click="cancel()">Cancel</button>
+    -->
+  </div>
+  <!-- </form>    -->
+</div>
+<div class="" id="add-form" ng-if="selectedMenuItem != null" style="margin-top:0px;">
+            <!-- <form action=""> --> <!-- form tag if you need it -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                        <label for="itemName">Item Name</label>
+                            <input type="text" name="itemName" ng-model="selectedMenuItem.name" class="form-control" placeholder="Item Name">
+                        </div>
+                        <div class="form-group col-md-4">
+                        <label for="itemPrice">Item Price</label>
+                            <input type="text" name="itemPrice" ng-model="selectedMenuItem.price" class="form-control" placeholder="Item Price">
+                        </div>
+                        <div class="form-group col-md-4">
+                        <label for="itemUid">Item Universal ID</label>
+                            <input type="text" name="itemUid" ng-model="selectedMenuItem.uid" class="form-control" placeholder="Item UId">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                    <label for="itemDesc">Item Description</label>
+                        <textarea name="itemDesc" id="" cols="30" rows="10" ng-model="selectedMenuItem.description" class="form-control" placeholder="Item Description"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                        <label for="itemCata">Change item Category</label>
+                            <select ng-model="selectedMenuItem.category" class="form-control"> <!-- category ng-repeat -->
+                                <option ng-repeat="cat in categories" value="{{cat}}">{{cat}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Or item to a new category</label>
+                            <input type="text" name="new-cat" ng-model="selectedMenuItem.category" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row hide">
+                        <div class="form-group">
+                            <div>Type of Item</div>
+                            <input type="radio" name="itemType" value="veg" class="col-md-2">Veg
+                            <input type="radio" name="itemType" value="nonveg" class="col-md-2">Non-Veg
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        
+                        
+                    </div>
+                    
+                    <div ng-repeat="caty in categories" class="hide">{{caty}}</div>
+                </div>
+            </div>
+
+            <!-- </form>    -->
+        </div>
+<div ng-if="selectedMenuItem == null">
+<p>Sorry, the requested menu item is not available.</p>
+</div>
+</div>
+<div class="modal-footer">
+<button type="submit" ng-click="editorSave()" class="btn btn-sm btn-primary"><span class="fa fw fa-save"></span> &nbsp; Save Changes</button>
+  <button type="" ng-click="editorSave()" class="btn btn-sm btn-primary"><span class="fa fw fa-trash"></span> &nbsp; Discard Changes</button>
+
+</div>

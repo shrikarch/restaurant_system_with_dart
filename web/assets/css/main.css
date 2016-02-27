@@ -1,0 +1,8 @@
+@import url('offlinefont.css'); /* offline fonts etc*/
+@import url('dashboard.css'); /* styles for admin */
+@import url('viewstyle.css'); /* styles for view */
+@import url('footer.css');
+
+#add-form{
+  margin-top:50px;
+}

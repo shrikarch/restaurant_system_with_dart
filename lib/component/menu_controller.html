@@ -1,0 +1,191 @@
+<div ng-switch="menuItemsLoaded">
+    <div ng-switch-when="false">
+        
+    </div>
+    <div ng-switch-when="true">
+        <span>{{tableNumber}}</span>
+        <div id="section-topbar">
+            <div id="topbar-inner">
+              <div class="container">
+                <div class="row">
+                  <div class="dropdown">
+                    <ul id="nav" class="nav">
+                      <li class="menu-item"><a class="smoothScroll" href="#about" title="About"><span class="fa fa-user"></span> PROFILE</a></li>
+                      <li class="menu-item"><a class="smoothScroll" href="#resume" title="Resume"><span class="fa fa-glass"></span> CLINK</a></li>
+                      <!--<li class="menu-item"><a class="smoothScroll" href="#contact" title="Contact"><span class="fa fa-flask"></span> MIX'T-UP</a></li>-->
+                      <li class="menu-item dropdown">
+                          <a class="dropdown-toggle" dropdown-toggle>
+                            <span class="fa fa-list"></span> ORDERS <span class="fa fa-fw fa-caret-down"></span> &nbsp;<span class="label label-danger" id="up-count" style="border-radius: 1em; font-size: 10px;">{{orderItemsCount}}</span></a>
+                        </a>
+                        <ul class="dropdown-menu" id="ordered-it">
+                          <div ng-switch="items.isNotEmpty">
+                            <div ng-switch-when="true">
+                              <li ng-repeat="choice in items">
+                                <a>{{choice.itemName}} : {{choice.quantity}}</a>
+                              </li>
+                            </div>
+                            <div ng-switch-when="false">
+                              <p>You have not selected any menu item yet.</p>
+                            </div>
+                          </div>
+                      </ul>
+                  </li>
+                  <li class="menu-item"><a class="smoothScroll" href="#contact" title="Contact" ng-click="sendOrder()"><span class="fa fa-flask"></span> CONFIRM ORDER</a></li>
+              </ul><!--/ uL#nav -->
+          </div><!-- /.dropdown -->
+
+          <div class="clear"></div>
+      </div><!--/.row -->
+  </div><!--/.container -->
+
+  <div class="clear"></div>
+</div><!--/ #topbar-inner -->
+</div><!--/ #section-topbar -->
+
+<div id="headerwrap" style="background: url(../assets/img/{{restaurantDetail.background}}.jpg) no-repeat center top; background-size: cover; background-position: center center;">
+    <div class="container">
+      <div class="row centered">
+        <div class="col-lg-6 col-md-offset-3" style="background-color:rgba(0,0,0,0.6);">
+          <h1>{{restaurantDetail.name}}</h1>
+          <h3>{{restaurantDetail.address}}</h3>
+      </div><!--/.col-lg-12 -->
+  </div><! -/.row -->
+</div><!--/.container -->
+</div><!--/.#headerwrap -->
+
+
+<section id="about" name="about"></section>
+<div class="intro">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-2 col-lg-offset-1">
+          <h5>ABOUT</h5>
+      </div>
+      <div class="col-lg-6">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque perspiciatis consequuntur iste odit qui. Obcaecati minima, adipisci iusto et temporibus delectus, veritatis itaque quidem commodi illum. Corrupti deleniti exercitationem fuga?</p>
+      </div>
+      <div class="col-lg-3">
+          <p><a href="#"><i class="icon-file"></i></a> <sm>DOWNLOAD PDF</sm></p>
+      </div>
+      
+  </div><!--/.row -->
+</div><!--/.container -->
+</div><!--/ #intro -->
+
+
+
+<div ng-repeat="list in properMenuItems">
+    <div class="intro-next {{list.first.category}}" style="background-image: url(assets/img/{{list.first.category}}menu.jpg);">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-offset-4 text-center">
+                    <h1>{{list.first.category}}</h1>
+                </div>
+
+            </div><!--/.row -->
+        </div><!--/.container -->
+    </div><!--/ #intro -->
+    <div class="container desc">
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-1">
+                <h4 style="font-weight:700;">{{list.first.category}}</h4>
+            </div>
+            <div class="col-lg-9">
+                <div class="row" ng-repeat="item in list">
+                    <div class="col-lg-12">
+                        <div class="row" id="{{item.uid}}">
+                            <div class="col-lg-8">
+                                <p><t>{{item.name}}</t><br/>
+                                    {{item.description}}<br/>
+                                    <rating max-rating="5" rating="item.rating"></rating>
+                                </p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p><span class="fa fa-rupee"></span>  {{item.price}} <br/>
+                                    <imp class="pointer" ng-click="orderItem(item.menuItemId)"><sm>  <span class="add-state">Add to</span><span class="remove-state hide">Remove from</span>
+                                        Order</sm></imp>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div><!--/.row -->
+        </div><!--container after menuhead-->
+        
+        <br>
+        <hr>
+    </div><!--/.container -->
+    <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="h4 f-list-head">
+                            Courses
+                        </div>
+                        <div class="f-list">
+                            <ul>
+                                <li><a href="">ICWA</a></li>
+                                <li><a href="">ICWA</a></li>
+                                <li><a href="">SYJC</a></li>
+                                <li><a href="">SYJC</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="h4 f-list-head">
+                            Misc
+                        </div>
+                        <div class="f-list">
+                            <ul>
+                                <li><a href="">Misc1</a></li>
+                                <li><a href="">Misc2</a></li>
+                                <li><a href="">Misc3</a></li>
+                                <li><a href="">Misc4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="h4 f-list-head">
+                            Careers
+                        </div>
+                        <div class="f-list">
+                            <ul>
+                                <li><a href="">Teacher</a></li>
+                                <li><a href="">Teaching Assistant</a></li>
+                                <li><a href="">Secretary</a></li>
+                                <li><a href="">Receptionist</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-push-2 rights-logo">
+                        <p class="h3">EdgeAchievers</p>
+                        <p class="rights-line">All Rights Reserved</p>
+                        <p class="f-social">
+                            <a href="#"><span class="fa fa-facebook"></span></a>
+                            <a href="#"><span class="fa fa-twitter"></span></a>
+                            <a href="#"><span class="fa fa-linkedin"></span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <ul class="hide">
+        
+        <li ng-repeat="list in properMenuItems">
+            <h2>{{list.first.category}}</h2>
+            <ul>
+                <li ng-repeat="item in list">
+                    <span>{{item.name}}</span>&nbsp;<rating max-rating="5" rating="item.rating"></rating>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</div>

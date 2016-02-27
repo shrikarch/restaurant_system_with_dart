@@ -1,0 +1,91 @@
+@font-face{
+    font-family: 'Lato';
+    src: url(../font/Lato/Lato-Regular.ttf);
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'Lato';
+    src: url(../font/Lato/Lato-Light.ttf);
+    font-weight: 300;
+}
+/* @font-face{
+    font-family: 'Lato';
+    src: url(../font/Lato/Lato-LightItalic.ttf);
+    font-weight: 300;
+} */
+@font-face{
+    font-family: 'Lato';
+    src: url(../font/Lato/Lato-Bold.ttf);
+    font-weight: 700;
+}
+/*@font-face{
+    font-family: 'Lato';
+    src: url(../font/Lato/Lato-BoldItalic.ttf);
+    font-weight: 700;
+}*/
+@font-face{
+    font-family: 'Lato';
+    src: url(../font/Lato/Lato-Black.ttf);
+    font-weight: 900;
+}
+/*@font-face{
+    font-family: 'Lato';
+    src: url(../font/Lato/Lato-BlackItalic.ttf);
+    font-weight: 900;
+}*/
+@font-face{
+    font-family: 'Lato';
+    src: url(../font/Lato/Lato-Hairline.ttf);
+    font-weight: 100;
+}/*@font-face{
+    font-family: 'Lato';
+    src: url(../font/Lato/Lato-HairlineItalic.ttf);
+    font-weight: 100;
+}*/
+/*raleway*/
+@font-face{
+    font-family: 'Raleway';
+    src: url(../font/Raleway/Raleway-Thin.ttf);
+    font-weight: 100;
+}@font-face{
+    font-family: 'Raleway';
+    src: url(../font/Raleway/Raleway-ExtraLight.ttf);
+    font-weight: 200;
+}
+@font-face{
+    font-family: 'Raleway';
+    src: url(../font/Raleway/Raleway-Light.ttf);
+    font-weight: 300;
+}
+@font-face{
+    font-family: Raleway;
+    src: url(../fontRaleway/Raleway-Regular.ttf);
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'Raleway';
+    src: url(../font/Raleway/Raleway-Medium.ttf);
+    font-weight: 500;
+}
+@font-face{
+    font-family: 'Raleway';
+    src: url(../font/Raleway/Raleway-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face{
+    font-family: 'Raleway';
+    src: url(../font/Raleway/Raleway-Bold.ttf);
+    font-weight: 700;
+}
+@font-face{
+    font-family: 'Raleway';
+    src: url(../font/Raleway/Raleway-ExtraBold.ttf);
+    font-weight: 800;
+}
+@font-face{
+    font-family: 'Raleway';
+    src: url(../font/Raleway/Raleway-Heavy.ttf);
+    font-weight: 900;
+}
+
+
